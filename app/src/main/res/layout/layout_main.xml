@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kingteller.com.table.MainActivity">
+    <Button
+        android:id="@+id/btn_prtbmp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打印凭条" />
+    <LinearLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+        <include layout="@layout/item_header"/>
+        <ListView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_frame_gray"
+            android:scrollbars="none"/>
+        <include layout="@layout/item_khqm"/>
+        <include layout="@layout/item_footer"/>
+    </LinearLayout>
+</LinearLayout>

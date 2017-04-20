@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:aaron="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include layout="@layout/common_custom_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">>
+        <Button
+            android:id="@+id/button_scan"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/connect"
+            />
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btnClose"/>
+    </LinearLayout>
+   <!-- <LinearLayout
+        android:id="@+id/kffw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <include layout="@layout/item_khqm"/>
+        <include layout="@layout/item_footer"/>
+    </LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <include layout="@layout/item_header"/>
+        <ListView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_frame_gray"
+            android:divider="#000"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"/>
+        <include layout="@layout/item_khqm"/>
+        <include layout="@layout/item_footer"/>
+    </LinearLayout>
+    <com.mview.medittext.view.KingTellerScrollView
+        android:id="@+id/layout_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/workType_group_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="left|center_vertical"
+                android:text="工作类别"
+                android:textColor="@color/common_left_edittext_textcolor"
+                android:textSize="@dimen/common_text_middleer" />
+            <com.mview.medittext.view.GroupListView
+                android:id="@+id/workType_group_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </com.mview.medittext.view.GroupListView>
+            <com.mview.medittext.view.KingTellerEditText
+                android:id="@+id/et_khqm"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_layout_off_bg"
+                android:paddingLeft="@dimen/common_padding5"
+                android:paddingRight="@dimen/common_padding5"
+                aaron:fieldEnabled="true"
+                aaron:fieldHint="点击签名"
+                aaron:fieldTitle="客户签名："
+                aaron:fieldType="Dialog" />
+            <ImageView
+                android:id="@+id/iv_khqm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/previewTicket"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="预览" />
+                <Button
+                    android:id="@+id/btn_prtbmp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_prtbmp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </com.mview.medittext.view.KingTellerScrollView>
+</LinearLayout>

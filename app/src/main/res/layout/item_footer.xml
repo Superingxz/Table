@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/table_frame_gray"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/kfrx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+		android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="16sp"
+        android:text="客服热线4007101688"/>
+    <ImageView
+        android:id="@+id/ewm"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="1dp"
+        android:textStyle="bold"
+        android:src="@drawable/kingtellerewm"/>
+</RelativeLayout>
